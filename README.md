@@ -21,4 +21,4 @@ Run it:
     $ cd node-kue-example
     $ fig up
 
-Running `boot2docker ip` probably gave you 192.168.59.103, so check out to [http://192.168.59.103:3000/submit](http://192.168.59.103:3000/submit). If it gave you a different IP, use that one instead.
+Running `boot2docker ip` probably gave you 192.168.59.103, so check out to [http://192.168.59.103:3000/run/ml?a=2&b=3](http://192.168.59.103:3000/run/ml?a=2&b=3). If it gave you a different IP, use that one instead.
