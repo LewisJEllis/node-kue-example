@@ -1,0 +1,28 @@
+web:
+  build: .
+  command: node server.js
+  volumes:
+    - .:/data
+  ports:
+    - "3000:3000"
+  links:
+    - redis
+
+emailworker:
+  build: .
+  command: node tasks/email-processor.js
+  volumes:
+    - .:/data
+  links:
+    - redis
+
+mlworker:
+  build: .
+  command: node tasks/ml-processor.js
+  volumes:
+    - .:/data
+  links:
+    - redis
+
+redis:
+  image: dockerfile/redis
